@@ -32,7 +32,7 @@
 		</config-file>
 		
         <!-- cordova plugin src files -->
-        <source-file src="src/android/Update.java" target-dir="src/org/common/plugins/updateapp" />
+        <source-file src="src/android/org/common/plugins/updateapp/Update.java" target-dir="src/org/common/plugins/updateapp" />
     </platform>
 
 </plugin>
