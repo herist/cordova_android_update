@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.common.plugins.updateapp"
+    version="0.3.3">
+
+    <author>Herist.ZHOU</author>
+
+	<description>
+		Update
+	</description>
+
+	<license>MIT</license>
+    
+    <asset src="www/update-plugin.js" target="update-plugin.js" />
+        
+    <engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+    
+    <!-- android -->
+    <platform name="android">
+		<!-- old
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name="Update" value="org.common.plugins.updateapp.Update"/>
+        </config-file>
+        -->
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="Update" >
+				<param name="android-package" value="org.common.plugins.updateapp.Update"/>
+			</feature>
+		</config-file>
+		
+        <!-- cordova plugin src files -->
+        <source-file src="src/android/Update.java" target-dir="src/org/common/plugins/updateapp" />
+    </platform>
+
+</plugin>
